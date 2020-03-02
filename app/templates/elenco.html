@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %}Elenco{% endblock %}
+
+      
+{% block content %}
+
+<div class="container image-container">
+
+        <img src="/static/image/image_elenco.jpg" class="image-container" alt="Curve GAD" >
+
+</div>
+
+<div class="container-fluid graph-container-list ">
+    
+    <form class="bottone" method="POST">
+        
+            <select class="selectpicker form-control" id="star" name="star" width="500px">
+                <option value='0'>Seleziona un oggetto</option>  
+                <div class=flashes>
+                       
+                {% for x in star %}
+                    {% if x == star %}
+			            <option style=" font-weight: bold;" selected value="{{ x }}">{{ x }}</option> 
+		            {% else %} 
+			            <option style=" font-weight: bold;" value="{{ x }}">{{ x }}</option> 
+                    {% endif %}
+                   
+                        
+                       
+                        
+                    
+                {% endfor %}
+           
+            </select>
+      
+        <hr> 
+        
+       
+        <p align='center'>
+        <button  style=" width:220px; background-color: white; color:black; display: inline-block; padding: 3px 20px; margin-right:10px; font-weight: bold; border-radius: 5px;" title="Grafica le osservazioni della stella scelta" type="submit" name="btn" value="Grafica osservazioni">Grafica osservazioni</button>
+         
+    <!--    <button  style=" width:220px; background-color: white; color:black; display: inline-block; padding: 3px 20px; margin-left:10px;font-weight: bold; border-radius: 5px;" title="Grafica le osservazioni della stella scelta" type="submit" name="btn" value="Tabella osservazioni">Tabella osservazioni    </button>-->
+        </p>    
+            
+             
+       
+        
+
+    </form>
+    
+    <div class="container content-container text-center">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                <p style="color:red">{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>        
+</div>
+
+{% endblock %}

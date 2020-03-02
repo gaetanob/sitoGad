@@ -1,0 +1,51 @@
+{% extends 'home_base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+
+<div class="container image-container">  
+  <img src="/static/image/image_init_orig.jpg" class="image-container" alt="Curve GAD" >
+
+</div>
+
+
+
+
+
+<div class="card-deck container content-container mx-auto">
+
+  <div class="card  border-secondary">
+    <div class="card-body">
+      <h5 class="card-title text-center">Grafica osservazioni</h5>
+      <p class="card-text">Scegli nel database la stella da graficare.</p>
+      <div class="text-center">
+        <a href="{{ url_for('elenco') }}" class="btn btn-info">Vai</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card  border-secondary">
+    <div class="card-body">
+      <h5 class="card-title text-center">Tabella stelle variabili</h5>
+      <p class="card-text">Elenco stelle presenti nel database</p>
+      <div class="text-center">
+        <a href="{{ url_for('tabella') }}" class="btn btn-info">Vai</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card  border-secondary">
+    <div class="card-body">
+      <h5 class="card-title text-center">Info sul sito</h5>
+      <p class="card-text">Informazioni sul progetto e sulle versioni del sito.</p>
+      <div class="text-center">
+        <a href="{{ url_for('about_project') }}" class="btn btn-info">Vai</a>
+      </div>  
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

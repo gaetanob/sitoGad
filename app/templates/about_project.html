@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+
+<div class="accordion container-fluid content-container mx-auto" id="accordionExample">
+   
+    <div class="card">
+      <div class="card-header " id="headingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Il progetto "Curve GAD"
+          </button>
+        </h5>
+      </div>
+  
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+        L'idea di un sito dove raccogliere tutte le osservazioni dell'astronomia digitale italiana in ogni campo (stelle variabili, pianeti extrasolari, blazar, ecc) parte da lontano. Nel congresso GAD del 2019 a Todi
+        siamo partiti con un'idea che ora diventa realtà. 
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="card">
+      <div class="card-header " id="headingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            Il sito "Curve GAD"
+          </button>
+        </h5>
+      </div>
+  
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+          Il sito è stato creato con Python 3 e la libreria Flask. Viene ospitato su un server Linux concesso dall'Associazione Astofili Bolognesi.
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="card">
+        <div class="card-header" id="heading3">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                Versioni del sito 
+            </button>
+        </div>
+
+        <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
+            <div class="card-body">
+              <h6> Vers. 1.0 beta - 24/02/2020</h6>
+              <ul>
+                  <li style='font-size:0.85rem'><em> Creato database MySQL per le osservazioni e le effemeridi.</em></li> 
+              </ul>
+
+              <h6> Vers. 0.4 beta - 01/02/2020</h6>
+              <ul>
+                  <li style='font-size:0.85rem'><em> Aggiunta pagina "Tabella".</em></li> 
+                  <li style='font-size:0.85rem'><em> Modificato CSS per schermi 4K (larghezza > 1770px).</em></li> 
+              </ul>
+
+                <h6> Vers. 0.3 beta - 29/01/2020</h6>
+                <ul>
+                    <li style='font-size:0.85rem'><em> Rimosso controllo per differenziare tipo di oggetto nell'elenco osservazioni.</em></li> 
+                    <li style='font-size:0.85rem'><em> Aggiunto controllo per mancata scelta oggetto pagina "Elenco".</em></li> 
+                    <li style='font-size:0.85rem'><em> Modificata grafica homepage</em></li> 
+                    <li style='font-size:0.85rem'><em> Pagina "About" resa migliore.</em></li> 
+
+
+                </ul>
+            
+                <h6> Vers. 0.2 beta - 12/12/2019</h6>
+                <ul>
+                    <li style='font-size:0.85rem'><em> Reso responsive il grafico di Bokeh</em></li>
+                    <li style='font-size:0.85rem'><em> Risolto bug con percorso file.</em></li>
+                    <li style='font-size:0.85rem'><em> Migliorato aspetto grafico complessivo sito.</em></ li>
+                    <li style='font-size:0.85rem'><em> Ridotto tempo di caricamento all'avvio del sito.</em></li> 
+                    <li style='font-size:0.85rem'><em> Creato controllo per differenziare tipo di oggetto nell'elenco osservazioni.</em></li> 
+                </ul>
+
+                <h6> Vers. 0.1 beta - 30/11/2019</h6>
+                <ul>
+                    <li style='font-size:0.85rem'><em> Online versione beta.</em></li> 
+                </ul>
+            </div>
+        </div>
+    
+</div> 
+
+
+
+
+{% endblock %}
