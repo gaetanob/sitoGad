@@ -66,8 +66,11 @@ def homepage():
 # il nome della stella scelta
 @app.route("/elenco", methods=['GET', 'POST'])
 def elenco():
-    df_obs = connessione_db('SELECT * FROM rilevazioni')
-    df_eff = connessione_db('SELECT * FROM effemeridi')
+    df_obs = connessione_db('SELECT rilevazioni.filtro,rilevazioni.jd, \
+                            rilevazioni.magnitudine,rilevazioni.osservatore, \
+                            rilevazioni.stella FROM rilevazioni')
+    df_eff = connessione_db('SELECT effemeridi.stella, effemeridi.periodo,\
+                            effemeridi.epoca FROM effemeridi')
 
     LISTA = df_obs['stella'].to_list()
 
