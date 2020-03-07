@@ -9,7 +9,7 @@ from flask import Flask
 from config import Config
 
 app = Flask(__name__)
-#app.secret_key = '26cf84ceb41c4fe5af8f2a957a03886a'
+app.secret_key = '26cf84ceb41c4fe5af8f2a957a03886a'
 app.config.from_object(Config)
 
 from app import routes

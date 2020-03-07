@@ -33,13 +33,13 @@ COLORE_FILTRO = {'Cl': 'black', 'Clear': 'black', 'Rc': 'red',
                  'Halfa': 'purple', 'R': 'red',
                  'unfiltered': 'black', 'Ir': 'coral'}
 
-def connessione_db(stringa):
+def connessione_db():
+    MYSQL_USER = 'your_user'
+    MYSQL_PASSWORD = 'your_pass'
+    MYSQL_HOST_IP = 'your_host'
+    MYSQL_PORT = 'port'
+    database = 'db_name'
 
-    MYSQL_USER = 'gad'
-    MYSQL_PASSWORD = '4ss0c14Z10n3#'
-    MYSQL_HOST_IP = 'www.associazioneastrofilibolognesi.it'
-    MYSQL_PORT = '3306'
-    database = 'gad'
 
     # ====== Connection ====== #
     # Connecting to mysql by providing a sqlachemy engine
@@ -226,7 +226,7 @@ def tabella():
 
     tab['tipo'] = tipo
 
-    tab.sort_values(by=['#'], inplace=True, ascending=False)
+    tab.sort_values(by=['#','obj'], inplace=True, ascending=[False,True])
 
     lista_dati = tab.values.tolist()
 
