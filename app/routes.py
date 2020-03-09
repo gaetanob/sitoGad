@@ -40,7 +40,6 @@ def connessione_db():
     MYSQL_PORT = 'port'
     database = 'db_name'
 
-
     # ====== Connection ====== #
     # Connecting to mysql by providing a sqlachemy engine
     engine = create_engine('mysql+mysqlconnector://'+MYSQL_USER+':'+MYSQL_PASSWORD+'@'+MYSQL_HOST_IP+':'+MYSQL_PORT+'/' + database, echo=False).connect()

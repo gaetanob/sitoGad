@@ -17,12 +17,20 @@
   
       <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
         <div class="card-body">
-        L'idea di un sito dove raccogliere tutte le osservazioni dell'astronomia digitale italiana in ogni campo (stelle variabili, pianeti extrasolari, blazar, ecc) parte da lontano. Nel congresso GAD del 2019 a Todi
-        siamo partiti con un'idea che ora diventa realtà. 
+          Curve GAD è sia un database dove raccogliere le curve di luce delle osservazioni fotometriche fatte da astrofili italiani 
+          che un programma per la loro visualizzazione grafica.
+          L’ipotesi di un tale sito era già stata proposta varie volte nel passato ed è stata da noi 
+          ripresa in occasione del convegno del GAD del 2019 a Todi in cui abbiamo illustrato il progetto.
+          <br><br>
+          Con questo sito è possibile archiviare le osservazioni fotometriche storiche e recenti e rappresentarle in forma agile e comoda.
+          E’ in grado di rappresentare file con colonne separate da virgola e con ogni estensione (.csv, .txt, .dat).
+          Gestisce file in formato tipo AAVSO oppure generati da Maxim o da Muniwin.
+          Di ogni stella è possibile vedere l’insieme complessivo delle osservazioni esistenti o zoomare su una o più curve.
+          Per ogni valore di misura viene evidenziato il filtro ed il nome dell’osservatore.
+          
         </div>
       </div>
     </div>
-
 
 
 
@@ -44,6 +52,43 @@
     </div>
 
 
+    <div class="card">
+      <div class="card-header " id="headingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+            Come caricare dati sul sito "Curve GAD"
+          </button>
+        </h5>
+      </div>
+  
+      <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+        <div class="card-body">
+        Se il programma è molto versatile sul contenuto dei file, non lo è sui nomi dei file, che debbono 
+        rigorosamente essere scritti nel modo tradizionale, ossia
+        <br> <br>
+        <center> <b>Nome Stella_data_osservatore_filtro.estensione</b> </center>
+        
+        dove:
+        <ul style="list-style-type:circle;">
+          <li><b>data</b> è il giorno in cui si è iniziata l'osservazione nella forma <b>AAAAMMGG</b></li>
+          <li><b>osservatore</b> è il cognome di chi ha fatto l'osservazione</li>
+          <li>i <b>filtri</b> possibili sono: <b>Rc R Ir V B Cl Ha unfiltered</b></li>
+          <li>l'estensione può essere: <b>csv, dat, txt</b></li>
+        </ul>
+        <br> 
+        Un esempio:
+        <br> <br>
+        <center> <b>Mu Lac_20180918_Lopresti_V.csv</b> </center>
+        <br> 
+        Per questa ragione è preferibile che vengano prima inviati a noi, che provvederemo a caricarli 
+        dopo averli editati e provati. Purtroppo molti usano titolare diversamente i propri file e ciò li renderebbe inutilizzabili.
+        L’invito è quindi di mandare le proprie osservazioni come allegato ad una mail indirizzata a <a href = "mailto: lorenzobarbieri@libero.it">lorenzobarbieri@libero.it</a> .
+
+        </div>
+      </div>
+    </div>
+
+
 
 
 
@@ -57,7 +102,16 @@
 
         <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
             <div class="card-body">
-              <h6> Vers. 1.1 - 06/03/2020</h6>
+              <h6> Vers. 1.1.2 - 09/03/2020</h6>
+              <ul>
+                  <li style='font-size:0.85rem'><em> Migliorata pagina About.</em></li>
+                  <li style='font-size:0.85rem'><em> Corretto richiesta al database.</em></li>
+                  <li style='font-size:0.85rem'><em> Corretta grafica icone.</em></li>
+                  <li style='font-size:0.85rem'><em> Modificata visualizzazione tabella.</em></li>
+                  <li style='font-size:0.85rem'><em> Versione on line non più beta.</em></li> 
+              </ul>
+
+              <h6> Vers. 1.1 - 01/03/2020</h6>
               <ul>
                   <li style='font-size:0.85rem'><em> Corretto richiesta al database.</em></li>
                   <li style='font-size:0.85rem'><em> Corretta grafica icone.</em></li>
@@ -68,37 +122,18 @@
               <h6> Vers. 1.0 beta - 24/02/2020</h6>
               <ul>
                   <li style='font-size:0.85rem'><em> Creato database MySQL per le osservazioni e le effemeridi.</em></li> 
-              </ul>
-
-              <h6> Vers. 0.4 beta - 01/02/2020</h6>
-              <ul>
                   <li style='font-size:0.85rem'><em> Aggiunta pagina "Tabella".</em></li> 
                   <li style='font-size:0.85rem'><em> Modificato CSS per schermi 4K (larghezza > 1770px).</em></li> 
-              </ul>
-
-                <h6> Vers. 0.3 beta - 29/01/2020</h6>
-                <ul>
                     <li style='font-size:0.85rem'><em> Rimosso controllo per differenziare tipo di oggetto nell'elenco osservazioni.</em></li> 
                     <li style='font-size:0.85rem'><em> Aggiunto controllo per mancata scelta oggetto pagina "Elenco".</em></li> 
                     <li style='font-size:0.85rem'><em> Modificata grafica homepage</em></li> 
                     <li style='font-size:0.85rem'><em> Pagina "About" resa migliore.</em></li> 
-
-
-                </ul>
-            
-                <h6> Vers. 0.2 beta - 12/12/2019</h6>
-                <ul>
                     <li style='font-size:0.85rem'><em> Reso responsive il grafico di Bokeh</em></li>
                     <li style='font-size:0.85rem'><em> Risolto bug con percorso file.</em></li>
                     <li style='font-size:0.85rem'><em> Migliorato aspetto grafico complessivo sito.</em></ li>
                     <li style='font-size:0.85rem'><em> Ridotto tempo di caricamento all'avvio del sito.</em></li> 
-                    <li style='font-size:0.85rem'><em> Creato controllo per differenziare tipo di oggetto nell'elenco osservazioni.</em></li> 
-                </ul>
-
-                <h6> Vers. 0.1 beta - 30/11/2019</h6>
-                <ul>
                     <li style='font-size:0.85rem'><em> Online versione beta.</em></li> 
-                </ul>
+              </ul>
             </div>
         </div>
     
