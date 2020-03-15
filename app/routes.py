@@ -33,7 +33,7 @@ COLORE_FILTRO = {'Cl': 'black', 'Clear': 'black', 'Rc': 'red',
                  'Halfa': 'purple', 'R': 'red',
                  'unfiltered': 'black', 'Ir': 'coral'}
 
-def connessione_db():
+def connessione_db(stringa):
     MYSQL_USER = 'your_user'
     MYSQL_PASSWORD = 'your_pass'
     MYSQL_HOST_IP = 'your_host'
