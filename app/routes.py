@@ -152,7 +152,7 @@ def grafico(lista_dati,df_eff,choice):
                                 int(t.iloc[i]) == (int(epocaP + numoss*periodo)+1):
                                 # disegna la riga del minimo
                                 eff_primario = (epocaP + (numoss*periodo))
-                                eff_secondario = 1+(epocaP + (numoss * periodo))
+                               # eff_secondario = 1+(epocaP + (numoss * periodo))
 
                                 line = Span(location=eff_primario,
                                             dimension='height',
@@ -160,14 +160,14 @@ def grafico(lista_dati,df_eff,choice):
                                             line_color='red',
                                             line_width=1)
 
-                                line2 = Span(location=eff_secondario,
-                                             dimension='height',
-                                             line_dash='dashed',
-                                            line_color='green',
-                                             line_width=0.8)
+                               # line2 = Span(location=eff_secondario,
+                                #             dimension='height',
+                                #             line_dash='dashed',
+                                #            line_color='green',
+                                #             line_width=0.8)
 
                                 p.add_layout(line)
-                                p.add_layout(line2)
+                                #p.add_layout(line2)
 
         i+=1
 
