@@ -33,6 +33,7 @@ COLORE_FILTRO = {'Cl': 'black', 'Clear': 'black', 'Rc': 'red',
                  'Halfa': 'purple', 'R': 'red',
                  'unfiltered': 'black', 'Ir': 'coral'}
 
+
 def connessione_db(stringa):
     MYSQL_USER = 'your_user'
     MYSQL_PASSWORD = 'your_pass'
@@ -111,12 +112,10 @@ def grafico(lista_dati,df_eff,choice):
 
     elenco_filtro=lista_dati['filtro'].to_list()
 
-
     set_filtro = set(elenco_filtro)
 
     p.xaxis.formatter = NumeralTickFormatter(format="0.00")
 
-    #source = ColumnDataSource(lista_dati)
     i=0
 
     while i < len(set_filtro):
@@ -141,12 +140,12 @@ def grafico(lista_dati,df_eff,choice):
 
                     epocaP = float(df_eff.loc[item]['epoca'])
                     periodo = float(df_eff.loc[item]['periodo'])
-                    numoss = 1
+                    numoss = 0
 
                     # cerca il giorno in cui c'è l'osservazione
                     for i in range(len(t)):
                         while ((numoss*periodo)+epocaP) < (t.iloc[i]):
-                            numoss = numoss + 1
+
                             # nel giorno in cui c'è l'osservazione
                             if int(t.iloc[i]) == int(epocaP + numoss*periodo) or \
                                 int(t.iloc[i]) == (int(epocaP + numoss*periodo)+1):
@@ -168,7 +167,7 @@ def grafico(lista_dati,df_eff,choice):
 
                                 p.add_layout(line)
                                 #p.add_layout(line2)
-
+                            numoss = numoss + 1
         i+=1
 
     p.y_range.flipped = True
