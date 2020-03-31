@@ -36,7 +36,7 @@ COLORE_FILTRO = {'Cl': 'black', 'Clear': 'black', 'Rc': 'red',
 
 def connessione_db(stringa):
 
-    _file = [line.rstrip('\n') for line in open('app/sitoGad.t')]
+    _file = [line.rstrip('\n') for line in open('app/sitoGad.txt')]
 
     MYSQL_USER = _file[0]
     MYSQL_PASSWORD = _file[1]
