@@ -35,11 +35,14 @@ COLORE_FILTRO = {'Cl': 'black', 'Clear': 'black', 'Rc': 'red',
 
 
 def connessione_db(stringa):
-    MYSQL_USER = 'your_user'
-    MYSQL_PASSWORD = 'your_pass'
-    MYSQL_HOST_IP = 'your_host'
-    MYSQL_PORT = 'port'
-    database = 'db_name'
+
+    _file = [line.rstrip('\n') for line in open('app/sitoGad.t')]
+
+    MYSQL_USER = _file[0]
+    MYSQL_PASSWORD = _file[1]
+    MYSQL_HOST_IP = _file[2]
+    MYSQL_PORT = _file[3]
+    database = _file[4]
 
     # ====== Connection ====== #
     # Connecting to mysql by providing a sqlachemy engine
@@ -147,8 +150,9 @@ def grafico(lista_dati,df_eff,choice):
                         while ((numoss*periodo)+epocaP) < (t.iloc[i]):
 
                             # nel giorno in cui c'è l'osservazione
-                            if int(t.iloc[i]) == int(epocaP + numoss*periodo) or \
-                                int(t.iloc[i]) == (int(epocaP + numoss*periodo)+1):
+                            if int(t.iloc[i]) == int(epocaP + numoss*periodo): # or \
+                                #int(t.iloc[i]) == (int(epocaP + numoss*periodo)+1):
+
                                 # disegna la riga del minimo
                                 eff_primario = (epocaP + (numoss*periodo))
                                # eff_secondario = 1+(epocaP + (numoss * periodo))
